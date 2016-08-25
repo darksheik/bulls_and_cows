@@ -14,10 +14,10 @@ int main() {
 	cout << "Your guess, please: ";
 	
 	string Guess = "";
-	cin >> Guess;
+	getline(cin, Guess);
 
 	// repeat the guess back to them
-	cout << endl << "You guessed " << Guess << endl;
+	cout << endl << "You guessed: " << Guess << endl;
 
 	return 0;
 }
