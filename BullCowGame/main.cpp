@@ -6,11 +6,13 @@ using namespace std;
 void PrintIntro();
 string GetGuessAndPrintBack();
 
+// application entry point
 int main() {
 	PrintIntro();
 
 	constexpr int NUM_GUESSES = 5;
 
+	// loop for the number of guesses
 	for (int i = 1; i <= NUM_GUESSES; i++) {
 		GetGuessAndPrintBack();
 		cout << endl;
