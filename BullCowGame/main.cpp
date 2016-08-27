@@ -7,11 +7,13 @@ void PrintIntro();
 void PlayGame();
 string GetGuess();
 void PrintGuess(string Guess);
+bool AskToPlayAgain();
 
 // application entry point
 int main() {
 	PrintIntro();
 	PlayGame();
+	AskToPlayAgain();
 	return 0; // exit the application
 }
 
@@ -50,4 +52,12 @@ string GetGuess() {
 void PrintGuess(string Guess) {
 	cout << "You guessed: " << Guess << endl;
 	return;
+}
+
+bool AskToPlayAgain() {
+	cout << "Do you want to play again? ";
+	string Response = "";
+	getline(cin, Response);
+
+	return (Response[0] == 'y' || Response[0] == 'Y');
 }
