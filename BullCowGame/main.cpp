@@ -8,8 +8,14 @@ string GetGuessAndPrintBack();
 
 int main() {
 	PrintIntro();
-    GetGuessAndPrintBack();
-	GetGuessAndPrintBack();
+
+	constexpr int NUM_GUESSES = 5;
+
+	for (int i = 1; i <= NUM_GUESSES; i++) {
+		GetGuessAndPrintBack();
+		cout << endl;
+	}
+
 	return 0;
 }
 
