@@ -3,7 +3,7 @@
 using FString = std::string;
 using int32 = int;
 
-struct BullCowCount {
+struct FBullCowCount {
 	int32 Bulls = 0;
 	int32 Cows = 0;
 };
@@ -21,7 +21,7 @@ public:
 	void IncrementTry();
 
 	// counts bulls & cows, and increases try #
-	BullCowCount SubmitGuess(FString);
+	FBullCowCount SubmitGuess(FString);
 
 // Please try and ignore this and focus on the interface above ^^
 private:
