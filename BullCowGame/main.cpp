@@ -15,7 +15,6 @@ using int32 = int;
 void PrintIntro();
 void PlayGame();
 FText GetGuess();
-void PrintGuess(FText Guess);
 bool AskToPlayAgain();
 
 FBullCowGame BCGame; // instantiate a new game
@@ -56,9 +55,9 @@ void PlayGame()
 
 		// print number of bulls and cows
 		std::cout << "Bulls = " << BullCowCount.Bulls;
-		std::cout << "Cows = " << BullCowCount.Cows;
+		std::cout << ". Cows = " << BullCowCount.Cows;
+		std::cout << std::endl;
 
-		PrintGuess(Guess);
 		std::cout << std::endl;
 	}
 
@@ -75,11 +74,6 @@ FText GetGuess() {
 	std::getline(std::cin, Guess);
     
 	return Guess;
-}
-
-void PrintGuess(FText Guess) {
-	std::cout << "You guessed: " << Guess << std::endl;
-	return;
 }
 
 bool AskToPlayAgain() {
