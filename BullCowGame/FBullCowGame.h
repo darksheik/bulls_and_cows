@@ -27,7 +27,6 @@ public:
 	EGuessStatus CheckGuessValidity(FString) const; // TODO make a more rich return value
 
 	void Reset(); // TODO make a more rich return value
-	void IncrementTry();
 
 	// counts bulls & cows, and increases try #
 	FBullCowCount SubmitValidGuess(FString);
@@ -38,4 +37,5 @@ private:
 	int32 MyCurrentTry;
 	int32 MyMaxTries;
 	FString MyHiddenWord;
+	bool bGameIsWon;
 };
