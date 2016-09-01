@@ -8,6 +8,14 @@ struct FBullCowCount {
 	int32 Cows = 0;
 };
 
+enum class EGuessStatus 
+{
+	OK,
+	Not_Isogram,
+	Wrong_Length,
+	Not_Lowercase
+};
+
 class FBullCowGame {
 public:
 	FBullCowGame(); // constructor 
@@ -16,7 +24,7 @@ public:
 	int32 GetCurrentTry() const;
 	int32 GetHiddenWordLength() const;
 	bool IsGameWon() const;
-	bool CheckGuessValidity(FString) const; // TODO make a more rich return value
+	EGuessStatus CheckGuessValidity(FString) const; // TODO make a more rich return value
 
 	void Reset(); // TODO make a more rich return value
 	void IncrementTry();
