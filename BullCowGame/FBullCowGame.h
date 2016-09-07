@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+
+// Making the syntax Unreal-friendly
 using FString = std::string;
 using int32 = int;
 
